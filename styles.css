@@ -1,0 +1,473 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    overflow-x: hidden;
+}
+
+/* Full height for each section */
+section, .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    background-color: #ab86e7;
+    color: #fff;
+    text-align: center;
+    padding: 3rem;
+    border-bottom: 5px solid #ffd700;
+    position: relative;
+    overflow: hidden;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    animation: slideInLeft 1s ease-out;
+}
+
+.header p {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    animation: slideInRight 1s ease-out;
+}
+
+/* the hero btn */
+
+.hero-btn {
+    /* display: inline-block; */
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    padding: 12px 34px;
+    border: 1px solid #ffb133;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+
+}
+
+.hero-btn:hover {
+    border: 1px solid #ffb133;
+    background:#0F0D1B;
+    transition: 1s;
+}
+
+
+/* Navigation Bar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #eea0a0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar-links a:hover {
+    background-color: #ff8e63;
+}
+
+/* Offset for each section to prevent overlap with navbar */
+section {
+    padding-top: 60px; /* Offset the height of the navbar */
+}
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Features Section */
+.features {
+    padding: 3rem 1.5rem;
+    background-color: #ffe5ec;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: #ff6363;
+    margin-bottom: 2rem;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card {
+    background: #fff3cd;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: #ffb703;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #333;
+    font-size: 1rem;
+}
+.benefits ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto; /* Center the benefits list */
+}
+
+.benefits li {
+    font-size: 1.2rem;
+    margin: 12px 0;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    color: #333;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.benefits li:hover {
+    transform: translateY(-5px);
+    background-color: #f7fcff;
+}
+
+.benefits li:before {
+    content: attr(data-icon);
+    font-size: 1.8rem;
+    margin-right: 15px;
+    color: #009688; /* Icon color to match theme */
+    font-weight: bold;
+    flex-shrink: 0; /* Prevents the icon from resizing with text */
+}
+
+.benefits li strong {
+    color: #009688; /* Highlight the benefit title in a subtle color */
+    margin-right: 10px; /* Add space between the title and the description */
+}
+
+.benefits li p {
+    margin: 0;
+    line-height: 1.4;
+    flex: 1; /* Allows text to take up remaining space */
+    display: inline; /* Keep text inline with strong */
+}
+
+/* Add a wrapper to align bold title and text properly */
+.benefits li div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 7rem;
+    text-align: center;
+    background-color: #a2d2ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: none;
+}
+
+.contact .form-group {
+    position: relative;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ffb703;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #ff6363;
+}
+
+.submit-btn {
+    position: relative;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6363;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff8e63;
+}
+
+.button-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.submit-btn:hover .button-animation {
+    transform: scaleX(1);
+}
+
+.success-message {
+    margin-top: 1.5rem;
+    color: #28a745;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+/* --------------------ABOUT OUR MISSION PAGE----------- */
+/* Mission Section */
+.mission {
+    position: relative;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #f0f8ff 30%, #d4eaf5 100%);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    animation: slideIn 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Content Styling */
+.mission-content {
+    z-index: 1;
+    
+}
+
+.mission h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.mission p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Button Styling */
+.learn-more-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #ff6363, #ff9057);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.25s ease;
+    box-shadow: 0 4px 8px rgba(255, 99, 99, 0.3);
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+.learn-more-btn:hover {
+    background: linear-gradient(45deg, #ff8e63, #ffb078);
+    transform: scale(1.07) translateY(-3px);
+    box-shadow: 0 6px 14px rgba(255, 99, 99, 0.4);
+}
+
+/* Popup Overlay */
+.mission-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #555;
+}
+
+/* Animations */
+/* @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+ */
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    border-top: 5px solid #ffd700;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header p {
+        font-size: 1.1rem;
+    }
+    
+    .feature-cards {
+        flex-direction: column;
+    }
+}
